@@ -1,24 +1,16 @@
-var MoviesList = React.createClass({
+MoviesList = React.createClass({
     propTypes: {
-        items: React.PropTypes.any.isRequired,
+        items: React.PropTypes.array.isRequired,
     },
     render: function() {
-
-        var moviesElements = movies.map(function(movie) {
-            return React.createElement('li', {
-                    key: movie.id
-                },
-                React.createElement('h2', {}, movie.title)
-
-            );
+        var moviesElements = this.props.items.map(function(movie) {
+            return React.createElement(Movie, {key: movie.id, item: movie});
         });
         return (
-
             React.createElement('div', {},
                 React.createElement('h1', {}, 'Lista filmów'),
                 React.createElement('ul', {}, moviesElements)
             )
-
         );
     }
 })

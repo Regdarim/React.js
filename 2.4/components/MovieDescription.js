@@ -1,17 +1,8 @@
 var MovieDescription = React.createClass({
 	propTypes:{
-		desc: React.PropTypes.any.isRequired,
+		desc: React.PropTypes.string,
 	},
 	render: function(){
-		var descs = movies.map(function(movie){
-			return(
-			
-				React.createElement('p',{key: movie.id}, movie.desc)
-				)
-		})
-
-		return (
-			React.createElement(descs)
-			);
+		return React.createElement('p', {}, this.props.desc);		
 	}	
 })
