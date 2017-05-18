@@ -1,5 +1,3 @@
-
-
 var MovieTitle = React.createClass({
 	propTypes:{
 		movie: React.PropTypes.string,

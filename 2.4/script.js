@@ -20,5 +20,7 @@ var movies = [{
   src: './img/G.jpg'
 }];
 
-var element = React.createElement(MoviesList,{items:movies})
+var element = React.createElement(MoviesList, {
+  items: movies
+})
 ReactDOM.render(element, document.getElementById('app'));
