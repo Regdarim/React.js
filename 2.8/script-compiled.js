@@ -23,7 +23,7 @@ App = React.createClass({
                 gif: gif, // b
                 searchingText: searchingText // c
             });
-        }).bind(this);
+        }.bind(this));
     },
     getGif: function getGif(searchingText, callback) {
         // 1.
@@ -70,7 +70,7 @@ App = React.createClass({
             }),
             React.createElement(Gif, {
                 loading: this.state.loading,
-                url: this.state.gif,
+                url: this.state.gif.url,
                 sourceUrl: this.state.gif.sourceUrl
             })
         );
